@@ -1,0 +1,30 @@
+<p>primer-component works!</p>
+<p>Nombre</p>
+<input type="text" name="">
+<p>Correo</p>
+<input type="text" name="">
+<br>
+<button (click)="enviar()">Enviar HDP</button>
+
+<p>{{ estado }}</p>
+
+<div *ngIf="MostrarPass; then Mostrar; else Ocultar"></div>
+
+<div [ngSwitch]="color">
+    <div *ngSwitchCase="'verde'">Verde</div>
+    <div *ngSwitchCase="'azul'">Azul</div>
+    <div *ngSwitchCase="'rojo'">Rojo</div>
+    <div *ngSwitchDefault>No hay color</div>
+</div>
+
+<div *ngFor="let nombres of akatsuki">
+    <p>{{nombres}}</p>
+</div>
+
+<ng-template #Mostrar>
+    <p>123456789</p>
+</ng-template>
+
+<ng-template #Ocultar>
+    <p>*********</p>
+</ng-template>
